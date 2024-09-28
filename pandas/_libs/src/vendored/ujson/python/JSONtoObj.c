@@ -38,9 +38,11 @@ https://www.opensource.apple.com/source/tcl/tcl-14/tcl/license.terms
 
 // Licence at LICENSES/ULTRAJSON_LICENSE
 
-#include "pandas/vendored/ujson/lib/ultrajson.h"
 #define PY_SSIZE_T_CLEAN
+// clang-format off
 #include <Python.h>
+#include "pandas/vendored/ujson/lib/ultrajson.h"
+// clang-format on
 
 static int Object_objectAddKey(void *Py_UNUSED(prv), JSOBJ obj, JSOBJ name,
                                JSOBJ value) {
